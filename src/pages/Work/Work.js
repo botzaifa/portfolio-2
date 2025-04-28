@@ -134,3 +134,18 @@ function Experience({ name, dates, description, position, link }) {
     </div>
   );
 }
+
+// function Certification({ name, dates, description, position, link }) {
+//   return (
+//     <div className="certification-container">
+//       <div className="certification-header">
+//         <a href={link} target="_blank" rel="noreferrer">
+//           <b>{name}</b>
+//         </a>
+//         <p className="certification-dates">{dates.join('-')}</p>
+//       </div>
+//       <p className="certification-position">{position}</p>
+//       <p>{description}</p>
+//     </div>
+//   );
+// }

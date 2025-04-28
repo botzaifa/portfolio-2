@@ -1,17 +1,14 @@
 import React from 'react';
-// import './About.css';
 import '../../styles/ProfileLayout.css';
-// import Sidebar from '../../components/Sidebar/Sidebar';
-// import EXPERIENCE from '../../assets/experience';
-import me from '../../assets/me.png';
+import mic from '../../assets/mic.png';
 
-export default function About() {
+export default function Self() {
   return (
-    <div className="about">
+    <div className="self">
       <div className="intro-container about-intro-container">
-        <img src={me} className="pic" alt="a headshot of me!" />
+        <img src={mic} className="pic" alt="a headshot of me!" />
         <div>
-          <p className="heading">Know ones call me Huzi.</p>
+          <p className="heading">Hi, I'm Huzaifa.</p>
           <br />
           <p>
             I'm currently in my Final Year of Study in{' '}
@@ -77,19 +74,19 @@ export default function About() {
                   <b>Shows</b>: You, The Last of Us, Hannibal
                 </li>
                 <li>
-                  <b>Artists</b>: Coldplay, The 1975, Fred Again, The Plot in You, The Weeknd,
+                  <b>Artists</b>: The 1975, Fred Again, The Plot in You, The Weeknd,
                   twenty one pilots, Dua Lipa, Post Malone, ZAYN, The Script, The Smiths,
                   Arctic Monkeys, Ciggarets After Sex, Kanye West, Kendrick Lamar
                 </li>
                 <li>
-                  <b>Games</b>: Call of Duty, Valorant
+                  <b>Games</b>: <i>Call of Duty</i>, <i>Valorant</i>
                 </li>
               </ul>
               <div className="contact">
-                <a href="mailto:khanhuzaifakm@gmail.com">Email</a>
-                <a href="https://x.com/botzaifa">X(Twitter)</a>
-                <a href="https://www.instagram.com/botzaifa/">Instagram</a>
-                <a href="https://open.spotify.com/user/31rog7qj3wny7mbtmxovlvw3n7ge?si=e96cbf99ef7c46f3">Spotify</a>
+                <a href="mailto:workwithhuzi@gmail.com">Email</a>
+                <a href="https://github.com/botzaifa">GitHub</a>
+                <a href="https://www.linkedin.com/in/botzaifa/">LinkedIn</a>
+                <a href="https://leetcode.com/u/botzaifa/">Leet code</a>
               </div>
             </div>
           </div>

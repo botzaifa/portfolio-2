@@ -7,6 +7,7 @@ const HACKATHON = [
       position: 'Institute Joint Winners',
       link: 'https://www.sih.gov.in/',
     },
+
     {
       name: 'Mumbai Hacks',
       date: 'December, 2023',
@@ -15,6 +16,7 @@ const HACKATHON = [
       position: '4th in Domain',
       link: 'https://mumbaihacks.com/',
     },
+    
     {
       name: 'Hackanova',
       date: 'February, 2024',
