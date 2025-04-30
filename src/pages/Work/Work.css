@@ -5,8 +5,44 @@
   border-bottom: 1px solid black;
 }
 
-.experience-container {
-  padding-right: 1vw;
+.experience-container,
+.certification-container {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid #ccc;
+}
+
+.experience-header,
+.certification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-header a,
+.certification-header a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.experience-header a:hover,
+.certification-header a:hover {
+  text-decoration: underline;
+}
+
+.experience-dates,
+.certification-dates {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.experience-position,
+.certification-position {
+  font-style: italic;
+  margin: 0.2rem 0 0.6rem;
+  color: #444;
 }
 
 .bio {
@@ -32,7 +68,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-content: center;
-  border-collapse: collapse; /* Add this line */
+  border-collapse: collapse;
   padding: 1vh 0;
   border-bottom: 1px solid black;
   margin-bottom: 2vh;
@@ -83,6 +119,7 @@
 .project-experience:hover {
   color: var(--accent);
 }
+
 .project-experience:hover a {
   color: var(--accent) !important;
 }
@@ -97,20 +134,25 @@
     display: flex;
     flex-direction: column;
   }
+
   .project-links,
   .projects-container {
     display: none;
   }
+
   .work .sidebar-container {
     border-top: none;
   }
+
   .project-images {
     width: 95%;
   }
+
   .project-experience:hover {
     color: black;
     cursor: auto;
   }
+
   .project-experience:hover a {
     color: black !important;
   }
