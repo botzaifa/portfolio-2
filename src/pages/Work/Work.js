@@ -2,20 +2,24 @@ import React, { useState } from 'react';
 import './Work.css';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import WORK from '../../assets/work';
-// import HACKATHON from '../../assets/hackathon';
-import EXPERIENCE from '../../assets/experience';
+import HACKATHON from '../../assets/hackathon';
+// import EXPERIENCE from '../../assets/experience';
 
 export default function Work() {
   const [work, setWork] = useState(WORK[0]);
   return (
     <div className="about work" id="work">
       <Sidebar
-        items={EXPERIENCE.map((exp) => (
-          <Experience
-            {...exp}
-            dates={[exp.dates.start, exp.dates.end ?? 'Present']}
-          />
+        // items={EXPERIENCE.map((exp) => (
+        //   <Experience
+        //     {...exp}
+        //     dates={[exp.dates.start, exp.dates.end ?? 'Present']}
+        //   />
+        // ))}
+        items={HACKATHON.map((hack) => (
+          <Hackathon {...hack} />
         ))}
+        
       >
         <div className="description">
           <p className="bio">
@@ -40,7 +44,9 @@ export default function Work() {
               Spotify
             </a>
           </div>
-          <p className="section-header pt-6">EXPERIENCE</p>
+          {/* <p className="section-header pt-6">EXPERIENCE</p> */}
+          <p className="section-header pt-6">HACKATHONS</p>
+
         </div>
       </Sidebar>
       <div className="intro-container">
@@ -120,20 +126,40 @@ export default function Work() {
   );
 }
 
-function Experience({ name, dates, description, position, link }) {
+
+function Hackathon({ name, date, description, position, link }) {
   return (
     <div className="experience-container">
       <div className="experience-header">
         <a href={link} target="_blank" rel="noreferrer">
           <b>{name}</b>
         </a>
-        <p className="experience-dates">{dates.join('-')}</p>
+        <p className="experience-dates">{date}</p>
       </div>
       <p className="experience-position">{position}</p>
       <p>{description}</p>
     </div>
   );
 }
+
+
+
+// function Experience({ name, dates, description, position, link }) {
+//   return (
+//     <div className="experience-container">
+//       <div className="experience-header">
+//         <a href={link} target="_blank" rel="noreferrer">
+//           <b>{name}</b>
+//         </a>
+//         <p className="experience-dates">{dates.join('-')}</p>
+//       </div>
+//       <p className="experience-position">{position}</p>
+//       <p>{description}</p>
+//     </div>
+//   );
+// }
+
+
 
 // function Certification({ name, dates, description, position, link }) {
 //   return (
