@@ -1,135 +1,249 @@
 const PLAY = [
   {
-    img: 'cookie.JPG',
-    title: 'My cat, Cookie',
+    img: 'sky01.png',
+    title: 'W Evening',
   },
   {
-    img: 'osaka.jpg',
-    title: 'osaka lanterns',
+    img: 'sky02.png',
+    title: 'W Evening',
   },
   {
-    img: 'tokyo1.jpg',
-    title: 'tokyo clothes',
+    img: 'sky03.JPG',
+    title: 'Random Sky',
   },
   {
-    img: 'phoebe.JPG',
-    title: 'Phoebe Bridgers portrait 1',
+    img: 'sky04.jpg',
+    title: 'W sky',
   },
   {
-    img: 'sugar.JPG',
-    title: 'Sugar',
+    img: 'sky05.jpg',
+    title: 'Bike mirror',
   },
   {
-    img: 'hk1.jpg',
-    title: 'hong kong',
+    img: 'sky06.png',
+    title: 'Random Sky 2',
   },
   {
-    img: 'grandma.JPG',
-    title: 'Grandma',
+    img: 'sky07.jpg',
+    title: 'Random Sky 3',
   },
   {
-    img: 'grandpa.JPG',
-    title: 'Grandpa',
+    img: 'sky08.png',
+    title: 'W Clouds',
   },
   {
-    img: 'shanghai.jpg',
-    title: 'shanghai',
+    img: 'sky09.png',
+    title: 'Random Sky 4',
   },
   {
-    img: 'jj_nans.jpg',
-    title: 'Jessica & Nandini',
+    img: 'sky10.jpg',
+    title: 'Random Sky 5',
   },
   {
-    img: 'seoul_bike.jpg',
-    title: 'eunpyong village bike',
+    img: 'sky11.jpg',
+    title: 'Random Sky 6',
+  },
+  // {
+  //   img: 'sky12.JPG',
+  //   title: 'Ali camera',
+  // },
+  // {
+  //   img: 'sky13.jpg',
+  //   title: 'Lower East Side',
+  // },
+  {
+    img: 'sun01.png',
+    title: 'W Evening',
   },
   {
-    img: 'turf2.JPG',
-    title: 'Turf valley winter 2',
+    img: 'tree01.png',
+    title: 'Random tree',
   },
   {
-    img: 'les.jpg',
-    title: 'Lower East Side',
+    img: 'tree02.jpg',
+    title: 'CN tree',
   },
   {
-    img: 'malavika-skate.jpg',
-    title: 'Malavika at the skate park',
+    img: 'tree03.png',
+    title: 'College tree',
   },
   {
-    img: 'malavika-suz.jpg',
-    title: 'Malavika and Juliana learning to skate',
+    img: 'wall01.png',
+    title: 'Gujarati restaurant',
   },
   {
-    img: 'mom.JPG',
-    title: 'Mom and Cookie',
+    img: 'wall02.png',
+    title: 'Metro out of service',
   },
   {
-    img: 'hanok_village.jpg',
-    title: 'hanok village, seoul',
+    img: "water01.png",
+    title: "Prey water 3",
   },
   {
-    img: 'brooklyn-bridge.jpg',
-    title: 'Friends at brooklyn bridge',
+    img: "water02.jpg",
+    title: "Prey water 4",
   },
   {
-    img: 'portrait_painting.jpg',
-    title: 'Portrait beach scene',
+    img: 'water03.png',
+    title: 'Prey water 3',
   },
   {
-    img: "portrait-1.JPG",
-    title: "Self portrait 1",
+    img: 'water04.jpg',
+    title: 'Prey water 4',
   },
   {
-    img: "phoebe-2.JPG",
-    title: "Phoebe Bridgers portrait 2",
+    img: 'water05.png',
+    title: 'Prey water 5',
   },
   {
-    img: 'sunset.jpg',
-    title: 'Malavika at sunset',
+    img: 'water06.png',
+    title: 'Mahim beatch',
   },
   {
-    img: 'suz_gloria.JPG',
-    title: 'Juliana and Gloria in NY',
+    img: 'water07.jpg',
+    title: 'Prey water 6',
   },
   {
-    img: 'suz-malu.jpg',
-    title: 'Juliana & malu skate park portraits',
+    img: 'cat01.png',
+    title: 'cat orange sleep',
   },
   {
-    img: 'suz-museum.jpg',
-    title: 'Juliana at the Whitney',
+    img: 'cat02.png',
+    title: 'cat sleeping',
   },
   {
-    img: 'suz-skate.jpg',
-    title: 'Juliana skateboarding',
+    img: 'cat03.png',
+    title: 'cat lookin me',
   },
   {
-    img: 'daidaipeng.jpg',
-    title: 'dai dai peng',
+    img: 'cat04.png',
+    title: 'cat looking left',
   },
   {
-    img: 'mountain.jpg',
-    title: 'Seoul mountain',
+    img: 'cat05.png',
+    title: 'cat king',
   },
   {
-    img: 'suz-sriya.jpg',
-    title: 'Juliana & Sriya',
+    img: 'cat06.png',
+    title: 'cat looking at me',
   },
   {
-    img: 'toucan.jpg',
-    title: 'Toucan painting',
+    img: 'cat07.png',
+    title: 'Black Cat looking left',
   },
   {
-    img: 'portrait-2.JPG',
-    title: 'Self portrait 2',
+    img: 'building01.png',
+    title: 'bldg and moon',
   },
   {
-    img: 'suz.JPG',
-    title: 'Juliana at skate park again',
+    img: 'lights01.png',
+    title: 'Balloon lights',
   },
   {
-    img: 'turf1.jpg',
-    title: 'Turf valley winter',
+    img: 'lights02.png',
+    title: 'ring lights',
   },
+  {
+    img: 'lights03.jpg',
+    title: 'tree lights',
+  },
+  {
+    img: 'lights04.png',
+    title: 'shaadi umbrella',
+  },
+  {
+    img: 'moon01.png',
+    title: 'evening moon',
+  },
+  {
+    img: 'moon02.png',
+    title: 'black and yellow sky moon',
+  },
+  {
+    img: 'moon03.PNG',
+    title: 'moon and sky only',
+  },
+  {
+    img: 'moon04.png',
+    title: 'zero to none moon',
+  },
+  {
+    img: 'plane01.jpg',
+    title: 'prey plane',
+  },
+  {
+    img: 'scene01.jpg',
+    title: 'prey scene 1',
+  },
+  {
+    img: 'scene02.jpg',
+    title: 'prey scene 2',
+  },
+  {
+    img: 'scene03.jpg',
+    title: 'Pune window',
+  },
+  {
+    img: 'scene04.jpg',
+    title: 'Pune scene 2',
+  },
+  {
+    img: 'scene05.jpg',
+    title: 'Pune scene 3',
+  },
+  {
+    img: 'scene06.jpg',
+    title: 'Pune scooter',
+  },
+  {
+    img: 'scene07.jpg',
+    title: 'Pune scene 5',
+  },
+  {
+    img: 'scene08.png',
+    title: 'Pune scene 6',
+  },
+  {
+    img: 'scene09.jpg',
+    title: 'train scene',
+  },
+  {
+    img: 'scene10.png',
+    title: 'home gate',
+  },
+  {
+    img: 'scene11.jpg',
+    title: 'college construction',
+  },
+  // {
+  //   img: 'scene12.jpg',
+  //   title: '',
+  // },
+  // {
+  //   img: 'scene13.jpg',
+  //   title: '',
+  // },
+  {
+    img: 'scene14.jpg',
+    title: 'Bandra scene',
+  },
+  {
+    img: 'scene15.jpg',
+    title: 'Bandra 2',
+  },
+  {
+    img: 'scene16.png',
+    title: 'Bandra 3',
+  },
+  // {
+  //   img: 'scene17.png',
+  //   title: 'gujarat cafe',
+  // },
+  {
+    img: 'laptop01.jpg',
+    title: 'First time made music',
+  }
+
+
 ];
 export default PLAY;
