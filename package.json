@@ -1,7 +1,7 @@
 {
   "name": "huzaifakhan",
-  "homepage": "https://huzaifakhan.me",
-  "version": "0.1.0",
+  "homepage": "https://botzaifa.github.io",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -15,7 +15,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -45,6 +45,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^6.3.0"
   }
 }

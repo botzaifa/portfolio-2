@@ -269,7 +269,7 @@ const WORK = [
   
   {
     name: 'CV Applications',
-    images: ['handtracking.png', 'facedetection.png'],
+    images: ['handtracking.PNG', 'facedetection.png'],
     description:
       '<p><strong>CV Applications</strong> is a collection of real-time computer vision projects focused on <strong>Face Detection</strong> and <strong>Hand Tracking</strong>, showcasing fundamental applications of deep learning and media processing.</p><br />' +
       '<p><strong>Face Detection</strong> employs <strong>OpenCV\'s Haar Cascade Classifiers</strong> to accurately detect and localize human faces in live video streams. The system uses pre-trained models that identify facial structures based on feature cascades, ensuring quick and efficient detections even on lightweight hardware. The solution is optimized for real-time processing, making it suitable for applications like security surveillance, attendance systems, and photo editing apps.</p><br />' +
