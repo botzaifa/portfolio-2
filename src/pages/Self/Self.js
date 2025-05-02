@@ -1,12 +1,13 @@
 import React from 'react';
-import '../../styles/ProfileLayout.css';
-import mic from '../../assets/mic.png';
+// import '../../styles/ProfileLayout.css';
+import './Self.css';
+import img from '../../assets/about_img.JPG';
 
 export default function Self() {
   return (
     <div className="self">
-      <div className="intro-container about-intro-container">
-        <img src={mic} className="pic" alt="a headshot of me!" />
+      <div className="self-intro-container self-intro-container">
+        <img src={img} className="pic" alt="a headshot of me!" />
         <div>
           <p className="heading">Hi, I'm Huzaifa.</p>
           <br />
@@ -29,7 +30,7 @@ export default function Self() {
           <p>
             Life's weird. Tech's weirder. Let's build weird things together.
           </p>
-          <div className="info-section">
+          <div className="self-info-section">
             <div className="text">
               <br />
               <p><b>Things I'm exploring right now: </b>Mobile development, Web 3, Frontend,</p>

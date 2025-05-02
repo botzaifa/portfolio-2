@@ -19,7 +19,7 @@ export default function Play() {
           cats who obviously run my life, and abstract visuals that may or may not have meaning.
         </p>
         <p>
-          No, I'm not an artist. Or a photographer. I just collect things that make my brain go “nice” and occasionally throw them together like it means something.
+          No, I'm not an artist. Or a photographer. I just collect things that make my brain go “hmm, nice” and occasionally throw them together like it means something.
         </p>
         <br />
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import '../../styles/ProfileLayout.css';
+// import '../../styles/ProfileLayout.css';
+import './About.css';
 import me from '../../assets/me.png';
 
 export default function About() {
