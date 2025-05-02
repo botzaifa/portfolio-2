@@ -1,91 +1,89 @@
-/* .experience-header {
-    display: flex;
-    justify-content: space-between;
-  }
-  p,
-  ul {
-    margin: 0;
-  }
-  .experience-position {
-    color: var(--body-grey);
-  } */
-  
-  .self-intro-container {
-    padding-top: 3vh;
-    overflow: auto;
-    position: fixed;
-    top: calc(5vh + 51px);
-    left: calc(35% + 4vw);
-    right: 3vw;
-    bottom: 0;
-  }
-  
-  .self-intro-container {
-    position: relative;
-    top: 0;
+/* .self-wrapper {
+  position: fixed;
+  top: calc(5vh + 51px);
+  left: calc(35% + 4vw);
+  right: 3vw;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 3vh;
+} */
+
+.self-wrapper {
+  position: fixed;
+  top: calc(5vh + 51px); /* adjust this to your top nav height */
+  left: 2vw; /* Align from the left – adjust as per your sidebar */
+  right: 3vw;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 3vh;
+}
+
+
+.self-intro {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.self-pic {
+  width: 40%;
+  object-fit: cover;
+  padding-right: 2vw;
+  object-position: 70%;
+}
+
+.self-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.self-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.self-info {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.self-contact {
+  padding-top: 3vh;
+}
+
+.self-contact a {
+  padding-right: 2vw;
+}
+
+.self-text a,
+.self-contact a {
+  color: var(--body-grey);
+  text-decoration: underline;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+/* ✅ Responsive Design */
+@media screen and (max-width: 768px) {
+  .self-wrapper {
     left: 0;
-    display: flex;
+    right: 0;
+    padding: 1rem;
   }
-  
-  .pic {
-    width: 40%;
-    object-fit: cover;
-    padding-right: 2vw;
-    object-position: 70%;
+
+  .self-intro {
+    flex-direction: column;
   }
-  
-  .contact {
-    padding-top: 3vh;
+
+  .self-pic {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 2vh;
   }
-  .contact a {
-    padding-right: 2vw;
-  }
-  .self-intro-container a,
-  .contact a {
-    color: var(--body-grey);
-    text-decoration: underline;
-  }
-  .heading a {
-    color: black;
-  }
-  .self-info-section {
-    display: flex;
-    margin-bottom: 5vh;
-    align-items: center;
-  }
-  .self-info-section img {
-    height: 40vh;
-    width: 40vh;
-    object-fit: cover;
-    object-position: 70%;
-    padding-left: 2vw;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .self {
-      display: flex;
-      overflow: auto;
-      position: fixed;
-      top: calc(5vh + 51px);
-      bottom: 0;
-      flex-direction: column;
-    }
-    .self .intro-container {
-      order: 2;
-    }
-    .self .sidebar-container {
-      order: 1;
-    }
-    .self-intro-container.self-intro-container {
-      width: 90%;
-      flex-direction: column;
-    }
-    .self-info-section {
-      flex-direction: column;
-    }
-    .pic {
-      width: 100%;
-      padding-bottom: 5vh;
-    }
-  }
-  
+}
