@@ -135,29 +135,26 @@
 
 @media screen and (max-width: 768px) {
   .mobile-project-info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .project-links,
-  .projects-container {
     display: none;
   }
 
-  .work .sidebar-container {
-    border-top: none;
+  .project-links {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
   }
 
-  .project-images {
-    width: 95%;
+  .projects-container {
+    padding: 1rem 0;
   }
 
-  .project-experience:hover {
-    color: var(--text-color); /* Text color instead of black */
-    cursor: auto;
+  .project-images img {
+    max-height: 250px;
   }
 
-  .project-experience:hover a {
-    color: var(--text-color) !important; /* Text color on hover */
+  .project-heading {
+    font-size: 1.5rem;
+    padding-top: 2vh;
   }
 }

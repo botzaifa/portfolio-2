@@ -34,8 +34,8 @@ export default function Work() {
             <a href="mailto:workwithhuzi@gmail.com">Email</a>
             <a href="https://github.com/botzaifa">GitHub</a>
             <a href="https://www.linkedin.com/in/botzaifa/">LinkedIn</a>
-            <a href="https://x.com/botzaifa">X(Twitter)</a>
-            <a href="https://leetcode.com/u/botzaifa/">Leet code</a>
+            {/* <a href="https://x.com/botzaifa">X(Twitter)</a> */}
+            <a href="https://leetcode.com/u/botzaifa/">Leetcode</a>
             {/* <a href="https://www.instagram.com/botzaifa/">Instagram</a> */}
             {/* <a href="https://open.spotify.com/user/31rog7qj3wny7mbtmxovlvw3n7ge?si=e96cbf99ef7c46f3">Spotify</a> */}
           </div>
@@ -87,7 +87,7 @@ export default function Work() {
           </div>
         </div>
         
-        <div className="mobile-project-info">
+        {/* <div className="mobile-project-info">
           {WORK.map((work) => (
             <div key={work.name}>
               <a
@@ -117,7 +117,7 @@ export default function Work() {
               <br />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
