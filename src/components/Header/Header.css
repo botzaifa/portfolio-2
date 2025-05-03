@@ -4,22 +4,26 @@ header {
   padding: 1.5vh 0;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--body-grey); /* Updated to match dark mode */
   position: relative;
   top: 0;
   left: 0;
+  background-color: var(--bg-color);
 }
+
 .titles {
   justify-content: space-between;
   display: flex;
   flex-direction: column;
 }
+
 .name {
   text-transform: uppercase;
   font-weight: bold;
   padding-right: 4vw;
   margin: 0;
 }
+
 .title {
   font-weight: bold;
   font-size: 1rem;
@@ -27,23 +31,28 @@ header {
   color: var(--accent);
   text-transform: capitalize;
 }
+
 .name a {
-  color: black;
+  color: var(--text-color); /* Changed to text color for dark mode */
 }
 
 header a {
   text-decoration: none;
 }
+
 .nav-container {
   display: flex;
 }
+
 .nav-container a {
-  color: var(--body-grey);
+  color: #e0e0e0; /* Brighter color for the static tabs */
   padding-right: 2vw;
   font-size: 1.2rem;
+  transition: color 0.3s ease; /* Smooth transition for hover */
 }
 
 .nav-container a:hover,
 .active {
-  color: var(--accent);
+  color: var(--accent); /* Blue on hover and active */
+  font-weight: bold; /* Slight bold effect on hover */
 }

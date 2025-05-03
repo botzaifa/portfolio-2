@@ -4,12 +4,16 @@
   --dark-grey: #384853;
   --body-grey: #8b949d;
   --body-grey-lighter: #868a8ead;
-  --accent: #0000ff;
+  --accent: #00bfff; /* optional: brighter blue accent for dark mode */
+  --text-color: #e0e0e0;
+  --bg-color: #121212;
 }
 
 body {
   font-family: "Suisse Int'l Boo", Helvetica, Arial, sans-serif;
   width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 h1 {
@@ -28,7 +32,12 @@ h1 {
   left: 0;
   padding-top: 2vh;
 }
+
 a {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
 }

@@ -2,14 +2,15 @@
   padding-top: 3vh;
   padding-bottom: 1vh;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--body-grey-lighter); /* Lighter border for dark mode */
+  color: var(--text-color); /* Text color */
 }
 
 .experience-container,
 .certification-container {
   margin-bottom: 1.5rem;
   padding-left: 1rem;
-  border-left: 2px solid #ccc;
+  border-left: 2px solid var(--body-grey-lighter); /* Lighter border for dark mode */
 }
 
 .experience-header,
@@ -23,7 +24,7 @@
 .certification-header a {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-color); /* Dark mode text color */
   text-decoration: none;
 }
 
@@ -35,29 +36,31 @@
 .experience-dates,
 .certification-dates {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--body-grey); /* Lighter color for dates */
 }
 
 .experience-position,
 .certification-position {
   font-style: italic;
   margin: 0.2rem 0 0.6rem;
-  color: #444;
+  color: var(--body-grey); /* Lighter color for position */
 }
 
 .bio {
   font-size: 1.3rem;
   font-weight: 500;
+  color: var(--text-color); /* Text color */
 }
 
 .section-header {
   font-weight: bold;
   font-size: 1.3rem;
+  color: var(--text-color); /* Text color */
 }
 
 .projects-header {
   padding-bottom: 1vh;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--body-grey-lighter); /* Lighter border */
 }
 
 .pt-6 {
@@ -70,19 +73,20 @@
   justify-content: center;
   border-collapse: collapse;
   padding: 1vh 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--body-grey-lighter); /* Lighter border */
   margin-bottom: 2vh;
 }
 
 .project-links p {
   padding-bottom: 2px;
   transition: all 0.25s ease;
+  color: var(--text-color); /* Text color */
 }
 
 .project-links p:hover,
 .selected-project {
   cursor: pointer;
-  color: var(--accent);
+  color: var(--accent); /* Accent color on hover */
   font-weight: bolder;
 }
 
@@ -108,7 +112,7 @@
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: var(--text-color); /* Text color */
   padding-top: 3vh;
 }
 
@@ -117,7 +121,7 @@
 }
 
 .project-experience:hover {
-  color: var(--accent);
+  color: var(--accent); /* Accent color on hover */
 }
 
 .project-experience:hover a {
@@ -149,11 +153,11 @@
   }
 
   .project-experience:hover {
-    color: black;
+    color: var(--text-color); /* Text color instead of black */
     cursor: auto;
   }
 
   .project-experience:hover a {
-    color: black !important;
+    color: var(--text-color) !important; /* Text color on hover */
   }
 }

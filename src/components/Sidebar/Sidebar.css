@@ -1,28 +1,32 @@
 .sidebar-container {
-  border-right: 1px solid black;
+  border-right: 1px solid var(--body-grey-lighter); /* Updated border color */
   width: 35%;
   overflow: auto;
   position: fixed;
   top: calc(5vh + 51px);
   bottom: 0;
+  background-color: var(--bg-color); /* Dark background for sidebar */
 }
 
 .sidebar-item {
   width: 95%;
-  border-bottom: 1px solid var(--body-grey-lighter);
+  border-bottom: 1px solid var(--body-grey-lighter); /* Keep lighter borders for separation */
   padding: 2vh 0;
   padding-right: 1vw;
+  color: var(--text-color); /* Dark mode text color */
 }
+
 .sidebar-item:last-child {
   border-bottom: none;
 }
+
 @media screen and (max-width: 768px) {
   .sidebar-container {
     width: 95%;
     border-right: none;
     position: static;
     overflow: initial;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--body-grey-lighter); /* Border for smaller screens */
   }
   .intro-container {
     overflow: initial;
