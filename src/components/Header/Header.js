@@ -15,9 +15,9 @@ export default function Header() {
       </div>
       <div className="nav-container">
         <Link to="/">Work</Link>
-        {/* <Link to="/resume">Resume</Link> */}
         <Link to="/self">About</Link>
         <Link to="/about">Extra</Link>
+        <Link to="/resume">Resume</Link>
         {/* <Link to="/play">Misc.</Link> */}
       </div>
     </header>

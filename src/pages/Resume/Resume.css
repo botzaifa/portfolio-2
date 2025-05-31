@@ -1,32 +1,50 @@
-/* Resume.css */
+/* Resume Page Styles */
 
 .resume-section {
-  padding: 60px 0;
-  background-color: #0a192f;
-  color: white;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
-}
-
-.project-heading {
-  font-size: 2.5rem;
-  font-weight: bold;
+  padding: 20px;
   text-align: center;
-  margin-bottom: 30px;
-}
-
-.purple {
-  color: #915eff;
 }
 
 .resume {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;  /* Adjust layout for mobile */
 }
 
-.video-container iframe {
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(145, 94, 255, 0.3);
+/* Make the PDF container responsive */
+.pdf-container {
+  width: 100%;
+  height: 80vh;  /* Adjust this height based on your preference */
+  max-width: 900px;  /* Ensure the iframe doesn’t get too large on desktop */
+  overflow: auto;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+}
+
+/* Button styling */
+.download-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.download-btn-container a {
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.download-btn-container a:hover {
+  background-color: #005f8d;
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+  .pdf-container {
+    height: 60vh; /* Adjust the height on mobile */
+  }
 }

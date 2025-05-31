@@ -7,7 +7,8 @@ import Self from './pages/Self/Self';
 import About from './pages/About/About';
 import Work from './pages/Work/Work';
 // import Play from './pages/Play/Play';
-// import Resume from './pages/Resume/Resume';
+// import Resume from './components/ResumeNew';
+import Resume from './pages/Resume/Resume';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
 
       <Routes>
         <Route exact path="/" element={<Work />} />
-        {/* <Route exact path="/resume" element={<Resume />} /> */}
+        <Route exact path="/resume" element={<Resume />} />
         {/* <Route exact path="/play" element={<Play />} /> */}
         <Route exact path="/self" element={<Self />} />
         <Route exact path="/about" element={<About />} />

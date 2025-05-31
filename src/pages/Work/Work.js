@@ -49,7 +49,8 @@ export default function Work() {
           {WORK.map((w) => (
             <p
               onClick={() => setWork(w)}
-              className={work.name === w.name && 'selected-project'}
+              // className={work.name === w.name && 'selected-project'}
+              className={work.name === w.name ? 'selected-project' : undefined}
               key={w.name}
             >
               {w.name}
