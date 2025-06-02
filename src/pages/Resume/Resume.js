@@ -2,19 +2,21 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Button } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
+
 import "./Resume.css";
 
 function Resume() {
   const [width, setWidth] = useState(window.innerWidth);
   const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(1); 
 
   // Directly use the path to the PDF from the public folder
   const resumePath = "/Resume.pdf"; // Direct path from the public directory
 
   // Setting up the pdf worker file
   useEffect(() => {
-    pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs"; // Direct path from the public directory
+    // pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs"; // Direct path from the public directory
+    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -28,6 +30,9 @@ function Resume() {
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
+  function onDocumentLoadError(error) {
+  console.error("Error while loading document:", error);
+}
 
   return (
     <div>
@@ -42,6 +47,7 @@ function Resume() {
             <Document
               file={resumePath}
               onLoadSuccess={onDocumentLoadSuccess}
+              onLoadError={onDocumentLoadError}
               loading="Loading PDF..."
             >
               <Page pageNumber={pageNumber} />
