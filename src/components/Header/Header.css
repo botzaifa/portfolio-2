@@ -1,58 +1,107 @@
 header {
   width: 100%;
-  height: 50px;
-  padding: 1.5vh 0;
+  padding: 1.5vh 2vw;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--body-grey); /* Updated to match dark mode */
+  align-items: center;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--body-grey);
   position: relative;
   top: 0;
   left: 0;
-  background-color: var(--bg-color);
+  z-index: 1000;
 }
 
-.titles {
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
-}
-
+/* Title */
 .name {
   text-transform: uppercase;
   font-weight: bold;
-  padding-right: 4vw;
   margin: 0;
-}
-
-.title {
-  font-weight: bold;
-  font-size: 1rem;
-  margin: 0;
-  color: var(--accent);
-  text-transform: capitalize;
 }
 
 .name a {
-  color: var(--text-color); /* Changed to text color for dark mode */
-}
-
-header a {
+  color: var(--text-color);
   text-decoration: none;
 }
 
+/* Nav Container */
 .nav-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 2rem;
 }
 
+
 .nav-container a {
-  color: #e0e0e0; /* Brighter color for the static tabs */
-  padding-right: 2vw;
+  color: #e0e0e0;
   font-size: 1.2rem;
-  transition: color 0.3s ease; /* Smooth transition for hover */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .nav-container a:hover,
 .active {
-  color: var(--accent); /* Blue on hover and active */
-  font-weight: bold; /* Slight bold effect on hover */
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background-color: #be50f4;
+  height: 4px;
+  width: 27px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger span.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger span.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger span.open:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ========================
+   Mobile Styles
+======================== */
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+    position: absolute; 
+    left: 90%; 
+    transform: translateX(-50%); 
+  }
+
+  .nav-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #181a27;
+    padding: 1rem 2rem;
+  }
+
+  .nav-container.show {
+    display: flex;
+  }
+
+  .nav-container a {
+    padding: 0.7rem 0;
+    font-size: 1.1rem;
+  }
 }

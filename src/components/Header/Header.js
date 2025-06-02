@@ -1,25 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
-// import { Link, useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
-  // const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header>
+    <header className={`header ${isOpen ? 'sticky' : ''}`}>
       <div className="titles">
         <h1 className="name">
           <Link to="/">Huzaifa خان</Link>
         </h1>
       </div>
-      <div className="nav-container">
-        <Link to="/">Work</Link>
-        <Link to="/self">About</Link>
-        <Link to="/about">Extra</Link>
-        <Link to="/resume">Resume</Link>
-        {/* <Link to="/play">Misc.</Link> */}
+
+      <div className="hamburger" onClick={toggleMenu}>
+        <span className={isOpen ? 'open' : ''}></span>
+        <span className={isOpen ? 'open' : ''}></span>
+        <span className={isOpen ? 'open' : ''}></span>
       </div>
+
+      <nav className={`nav-container ${isOpen ? 'show' : ''}`}>
+        <Link to="/" onClick={() => setIsOpen(false)}>Work</Link>
+        <Link to="/self" onClick={() => setIsOpen(false)}>About</Link>
+        <Link to="/about" onClick={() => setIsOpen(false)}>Extra</Link>
+        <Link to="/resume" onClick={() => setIsOpen(false)}>Resume</Link>
+        <Link to="/play" onClick={() => setIsOpen(false)}>Play</Link>
+      </nav>
     </header>
   );
 }
