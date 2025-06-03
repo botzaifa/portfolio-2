@@ -15,10 +15,12 @@
 .project-heading {
   font-size: 2.2rem;
   font-weight: bold;
+  color: var(--text-color);
 }
 
+/* Replace previous purple color with neutral gray */
 .purple {
-  color: #be50f4;
+  color: #aaa; /* Subtle gray tone */
 }
 
 /* PDF layout */
@@ -36,7 +38,7 @@
   width: 100%;
   overflow-x: auto;
   padding: 10px;
-  background-color: transparent; /* Match dark background */
+  background-color: transparent;
   border-radius: 10px;
 }
 
@@ -45,10 +47,10 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Download button */
+/* Download button - monochrome styling */
 .resume-section .btn-primary {
-  background-color: #be50f4;
-  border-color: #be50f4;
+  background-color: #333;       /* Dark gray button */
+  border-color: #333;
   color: #fff;
   font-weight: 500;
   padding: 0.6rem 1.2rem;
@@ -58,8 +60,8 @@
 }
 
 .resume-section .btn-primary:hover {
-  background-color: #a044c3;
-  border-color: #a044c3;
+  background-color: #000;       /* Even darker on hover */
+  border-color: #000;
   transform: translateY(-2px);
 }
 
