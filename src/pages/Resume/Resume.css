@@ -1,50 +1,86 @@
-/* Resume Page Styles */
+/* Resume.css */
 
+/* Main resume section */
 .resume-section {
-  padding: 20px;
+  padding: 60px 20px;
   text-align: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  position: relative;
+  z-index: 1;
 }
 
+/* Heading styles */
+.project-heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.purple {
+  color: #be50f4;
+}
+
+/* PDF layout */
 .resume {
+  margin: 30px auto;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-top: 20px;
-  flex-direction: column;  /* Adjust layout for mobile */
 }
 
-/* Make the PDF container responsive */
-.pdf-container {
-  width: 100%;
-  height: 80vh;  /* Adjust this height based on your preference */
-  max-width: 900px;  /* Ensure the iframe doesn’t get too large on desktop */
-  overflow: auto;
-  margin: 0 auto;
-  border: 1px solid #ddd;
-}
-
-/* Button styling */
-.download-btn-container {
+.react-pdf__Document {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px;
+  background-color: transparent; /* Match dark background */
+  border-radius: 10px;
 }
 
-.download-btn-container a {
-  padding: 10px 20px;
-  background-color: #0077b6;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+.react-pdf__Page {
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.download-btn-container a:hover {
-  background-color: #005f8d;
+/* Download button */
+.resume-section .btn-primary {
+  background-color: #be50f4;
+  border-color: #be50f4;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* For mobile devices */
-@media screen and (max-width: 768px) {
-  .pdf-container {
-    height: 60vh; /* Adjust the height on mobile */
+.resume-section .btn-primary:hover {
+  background-color: #a044c3;
+  border-color: #a044c3;
+  transform: translateY(-2px);
+}
+
+.download-button-row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive typography and spacing */
+@media (max-width: 768px) {
+  .project-heading {
+    font-size: 1.8rem;
+  }
+
+  .resume-section {
+    padding: 40px 10px;
+  }
+
+  .resume-section .btn-primary {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
 }

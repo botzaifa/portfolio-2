@@ -13,7 +13,7 @@
     "@testing-library/react": "",
     "@testing-library/user-event": "",
     "classnames": "",
-    "pdfjs-dist": "^3.4.120",
+    "pdfjs-dist": "^3.11.174",
     "react": "",
     "react-bootstrap": "",
     "react-dom": "",

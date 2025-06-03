@@ -1,72 +1,49 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Button } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
+import pdfWorker from "pdfjs-dist/build/pdf.worker.min.js?url";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import "react-pdf/dist/esm/Page/TextLayer.css";
 
 import "./Resume.css";
+import resumePDF from "./Resume.pdf"; // Adjust path as needed
+
+pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
 
 function Resume() {
   const [width, setWidth] = useState(window.innerWidth);
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1); 
 
-  // Directly use the path to the PDF from the public folder
-  const resumePath = "/Resume.pdf"; // Direct path from the public directory
-
-  // Setting up the pdf worker file
   useEffect(() => {
-    // pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.mjs"; // Direct path from the public directory
-    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-
+    const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  // Function to load the PDF document
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
-  function onDocumentLoadError(error) {
-  console.error("Error while loading document:", error);
-}
 
   return (
     <div>
       <Container fluid className="resume-section">
         <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
-          My <strong className="purple">Resume</strong>
+          My <strong className="purple">PDF Resume</strong>
         </h1>
 
-        {/* PDF Display using react-pdf */}
         <Row className="resume">
-          <div className="pdf-container">
-            <Document
-              file={resumePath}
-              onLoadSuccess={onDocumentLoadSuccess}
-              onLoadError={onDocumentLoadError}
-              loading="Loading PDF..."
-            >
-              <Page pageNumber={pageNumber} />
-            </Document>
-          </div>
+          <Document file={resumePDF} className="d-flex justify-content-center">
+            <Page pageNumber={1} scale={width > 786 ? 1.6 : 0.6} />
+          </Document>
         </Row>
 
-        {/* Download Button */}
-        <Row className="download-btn-container">
+        <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
-            href={resumePath}
+            href={resumePDF}
             target="_blank"
-            download="Resume.pdf"
+            download="Resume_Huzi.pdf"
             style={{ maxWidth: "250px" }}
-            className="mt-3"
           >
             <AiOutlineDownload />
-            &nbsp;Download Resume
+            &nbsp;Download CV
           </Button>
         </Row>
       </Container>
