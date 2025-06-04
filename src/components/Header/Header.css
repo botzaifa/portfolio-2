@@ -1,3 +1,4 @@
+/* Header container */
 header {
   width: 100%;
   padding: 1.5vh 2vw;
@@ -5,11 +6,19 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-color);
-  border-bottom: 1px solid var(--body-grey);
+  border-bottom: 1px solid #333;
   position: relative;
   top: 0;
   left: 0;
   z-index: 1000;
+}
+
+/* Sticky class (if used) */
+.sticky {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background-color: rgba(18, 18, 18, 0.95);
 }
 
 /* Title */
@@ -24,7 +33,7 @@ header {
   text-decoration: none;
 }
 
-/* Nav Container */
+/* Nav container */
 .nav-container {
   display: flex;
   justify-content: center;
@@ -33,21 +42,41 @@ header {
   margin-right: 2rem;
 }
 
-
 .nav-container a {
-  color: #e0e0e0;
+  position: relative;
+  color: var(--text-color);
   font-size: 1.2rem;
   text-decoration: none;
+  padding-bottom: 4px;
   transition: color 0.3s ease;
 }
 
+/* Underline animation */
+.nav-container a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-container a:hover::after,
+.nav-container a.active::after {
+  transform: scaleX(1);
+}
+
 .nav-container a:hover,
-.active {
-  color: var(--accent);
+.nav-container a.active {
+  color: #ccc;
   font-weight: bold;
 }
 
-/* Hamburger icon */
+/* Hamburger menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -55,7 +84,7 @@ header {
 }
 
 .hamburger span {
-  background-color: #be50f4;
+  background-color: #e0e0e0;
   height: 4px;
   width: 27px;
   margin: 5px 0;
@@ -80,9 +109,9 @@ header {
 @media (max-width: 767px) {
   .hamburger {
     display: flex;
-    position: absolute; 
-    left: 90%; 
-    transform: translateX(-50%); 
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
   }
 
   .nav-container {
@@ -92,7 +121,7 @@ header {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #181a27;
+    background-color: var(--bg-color);
     padding: 1rem 2rem;
   }
 
