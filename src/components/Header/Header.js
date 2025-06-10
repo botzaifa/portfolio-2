@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +22,11 @@ export default function Header() {
       </div>
 
       <nav className={`nav-container ${isOpen ? 'show' : ''}`}>
-        <Link to="/" onClick={() => setIsOpen(false)}>Work</Link>
-        <Link to="/self" onClick={() => setIsOpen(false)}>About</Link>
-        <Link to="/about" onClick={() => setIsOpen(false)}>Extra</Link>
-        <Link to="/resume" onClick={() => setIsOpen(false)}>Resume</Link>
-        {/* <Link to="/play" onClick={() => setIsOpen(false)}>Play</Link> */}
+        <NavLink to="/" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>Work</NavLink>
+        <NavLink to="/self" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>About</NavLink>
+        <NavLink to="/about" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>Extra</NavLink>
+        <NavLink to="/resume" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>Resume</NavLink>
+        {/* <NavLink to="/play" onClick={() => setIsOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>Play</NavLink> */}
       </nav>
     </header>
   );

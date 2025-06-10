@@ -11,9 +11,10 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-/* Sticky class (if used) */
+/* Sticky */
 .sticky {
   position: sticky;
   top: 0;
@@ -33,7 +34,7 @@ header {
   text-decoration: none;
 }
 
-/* Nav container */
+/* Nav */
 .nav-container {
   display: flex;
   justify-content: center;
@@ -51,7 +52,6 @@ header {
   transition: color 0.3s ease;
 }
 
-/* Underline animation */
 .nav-container a::after {
   content: '';
   position: absolute;
@@ -59,7 +59,7 @@ header {
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background-color: #ccc;
+  background-color: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -70,29 +70,35 @@ header {
   transform: scaleX(1);
 }
 
-.nav-container a:hover,
-.nav-container a.active {
-  color: #ccc;
+.nav-container a:hover {
+  color: #ffffff;
   font-weight: bold;
 }
 
-/* Hamburger menu */
+.nav-container a.active {
+  color: var(--accent) !important;
+  font-weight: bold;
+}
+
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  z-index: 1100;
 }
 
 .hamburger span {
   background-color: #e0e0e0;
-  height: 4px;
-  width: 27px;
-  margin: 5px 0;
-  transition: all 0.3s ease;
+  height: 3px;
+  width: 28px;
+  margin: 4px 0;
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hamburger span.open:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
 
 .hamburger span.open:nth-child(2) {
@@ -100,37 +106,41 @@ header {
 }
 
 .hamburger span.open:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* ========================
-   Mobile Styles
-======================== */
+/* ===== MOBILE ===== */
 @media (max-width: 767px) {
   .hamburger {
     display: flex;
     position: absolute;
     right: 1.5rem;
-    top: 1.2rem;
+    top: 1.5rem;
   }
 
   .nav-container {
-    display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--bg-color);
     padding: 1rem 2rem;
+    background-color: var(--bg-color);
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
   }
 
   .nav-container.show {
-    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .nav-container a {
-    padding: 0.7rem 0;
+    padding: 0.8rem 0;
     font-size: 1.1rem;
+    text-align: left;
   }
 }
